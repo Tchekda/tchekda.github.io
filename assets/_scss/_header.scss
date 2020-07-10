@@ -1,0 +1,78 @@
+.header {
+    padding: 70px 0 170px 0;
+    background: url(/assets/img/header.png) center top repeat;
+    @include background-size(cover);
+    color: white;
+    text-align: center;
+
+    &-logo {
+        display: block;
+        padding-top: 10px;
+        float: left;
+
+        img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    &-baseline {
+        margin: 210px 0 90px 0;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 1.2;
+        &-l {
+            display: block;
+            &1 {
+                font-weight: 700;
+                font-size: 70px;
+            }
+            &2{
+                font-size: 30px;
+            }
+            &3 {
+                font-size: 40px; 
+                padding-top: 20px;
+            }
+        }
+    }
+
+    &-btn {
+        display: inline-block;
+        padding: 0 40px;
+        font-size: 15px;
+        background-color: $green;
+        text-transform: uppercase;
+        line-height: 2.5;
+    }
+}
+
+.menu {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 53px;
+    float: right;
+    text-align: right;
+
+
+    &-item {
+        @include transition-duration;
+
+        &:first-child::before {
+            display: none;
+        }
+
+        &:before {
+            content: "-";
+            display: inline-block;
+            padding: 0 37px;
+            color: white;
+        }
+
+        &:hover,
+        &.is-active {
+            color: black;
+        }
+    }
+}
