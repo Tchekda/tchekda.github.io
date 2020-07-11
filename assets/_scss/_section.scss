@@ -1,0 +1,132 @@
+.section {
+    padding: 85px 0;
+    background-color: white;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        @include transform-origin(0, 0);
+        @include transform(skewY(-2deg));
+    }
+
+    &:after {
+        @include transform-origin(100%, 0);
+    }
+
+
+    &-title {
+        margin-bottom: 140px;
+        @include clearfix;
+
+        h1 {
+            margin: 0;
+            padding: 0 20px 0 0;
+            width: 200px;
+            float: left;
+    
+            border-right: 4px solid $green;
+            text-align: right;
+            text-transform: uppercase;
+            line-height: 45px;
+        }
+
+
+        p {
+            margin: 0;
+            width: auto;
+            float: left;
+            padding: 15px 0 0 100px;
+            line-height: 15px;
+            text-transform: uppercase;
+        }
+    }
+
+    &-icon {
+        color: black;
+        width: 7vw;
+        height: 7vw;
+        float: left;
+        margin-right: 1vw;
+        text-align: center;
+        line-height: 7vw;
+        border: 3px solid $green;
+        border-radius: 7vw;
+    }
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.background {
+    padding: 200px 0;
+    text-align: center;
+    color: white;
+    background: url(/assets/img/header.png) center top fixed;
+    @include background-size(cover);
+
+    .quote {
+        display: inline-block;
+        position: relative;
+        padding: 0 26px;
+        font-size: 45px;
+        font-weight: bold;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 26px;
+            text-align: center;
+        }
+
+        &:before {
+            content: "“";
+        }
+
+        &:after {
+            left: auto;
+            right: 0;
+            content: "”";
+        }
+    }
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    background-color: rgba($green, 0);
+    text-transform: uppercase;
+    line-height: 2.5;
+    border: 2px solid white;
+
+    @include transition-duration;
+
+    &:hover {
+        background-color: $green;
+        border-color: $green;
+        color: white;
+    }
+
+    &-primary {
+        border-color: $green;
+        color: black;
+        font-weight: bold;
+    }
+}

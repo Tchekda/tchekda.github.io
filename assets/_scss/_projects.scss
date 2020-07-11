@@ -1,0 +1,34 @@
+.projects {
+    margin: 0 -30px;
+
+    &-item {
+        margin: 30px;
+        width: 30vw;
+        float: left;
+        position: relative;
+        margin-bottom: 150px;
+    }
+    &-thumb {
+        img {
+            width: 30vw;
+            height: 370px;
+        }
+    }
+
+    &-info {
+        width: 70%;
+        padding: 7px 20px;
+        background-color: white;
+        position: absolute;
+        top: 330px;
+        right: 0;
+        text-align: justify;
+    }
+
+    &-meta {
+        padding-top: 20px;
+        font-size: 14px;
+        width: 125px;
+        text-align: right;
+    }
+}

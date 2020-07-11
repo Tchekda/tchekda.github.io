@@ -1,16 +1,21 @@
+* {
+    @include box-sizing(border-box);
+}
+
 body {
     margin: 0;
     padding: 0;
     font-size: 1em;
     line-height: 1.75; 
     font-family: 'Open Sans', sans-serif;
-    color: #82ccdd;
+    color: $primary;
 }
 
 h2 {
+    margin: 0 0 15px 0;
     font-size: 1.25em;
     font-weight: bold;
-    color: black;
+    color: $primary;
 }
 
 a {
@@ -18,9 +23,21 @@ a {
     text-decoration: none;
 }
 
+strong {
+    font-weight: 700;
+}
+
 p{
     padding: 0;
     margin: 0 0 20px 0 ;
+    font-weight: bold;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background-color: $green;
+    margin: 115px 0;
 }
 
 .cb {

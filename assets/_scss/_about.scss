@@ -1,0 +1,17 @@
+.about {
+    &-text {
+        width: 45vw;
+        float: left;
+        h2 {
+            color: $primary;
+        }
+    }
+
+    &-picture {
+        float: right;
+        
+        img {
+            width: 15vw;
+        }
+    }
+}
