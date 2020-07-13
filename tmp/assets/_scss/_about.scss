@@ -1,0 +1,31 @@
+.about {
+    &-text {
+        float: left;
+        h2 {
+            color: $primary;
+        }
+    }
+
+    &-picture {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.action {
+    &-text {
+        h2 {
+            color: $primary;
+        }
+        a {
+            color: $green;
+        }
+    }
+
+    &-picture {
+        img {
+            width: 100%;
+        }
+    }
+}
