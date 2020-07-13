@@ -13,9 +13,6 @@ jobs:
               uses: actions/checkout@v2
               with:
                 ref: dev
-                fetch-depth: 10
-                submodules: true
-                persist-credentials: false
             - name: Make destination directory for compiled project
               run: |
                 mkdir -vp /tmp/project/
@@ -35,8 +32,8 @@ jobs:
                 ref: master
             - name: Load new code to master
               run: |
-              cp -fvr /tmp/project/* ./
-              rm -rf tmp/
+                cp -fvr /tmp/project/* ./
+                rm -rf tmp/
             - name: Add and Commit changes to master branch
               run: |
                 git config --local user.email 'action@github.com'
