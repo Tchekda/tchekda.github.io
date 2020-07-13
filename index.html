@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns/profile">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,25 @@
     <meta name="description" content="David Tchekachev's Portfolio" />
     <meta name="author" content="Tchekda" />
     <meta name="copyright" content="© Tchekda" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Tchekda's Portfolio" />
+    <meta name="twitter:site" content="@DavidTchekachev" />
+    <meta name="twitter:creator" content="@Tchekda" />
+    <meta name="twitter:description"
+        content="This is Tchekda's portfolio, presenting him, his skills, his projects, and how to contact him">
+    <meta name="twitter:image" content="https://www.tchekda.fr/assets/img/Logo.png" />
+    <meta name="twitter:url" content="https://www.tchekda.fr/" />
+    <meta property="og:url" content="https://www.tchekda.fr/" />
+    <meta property="og:title" content="Tchekda's Portfolio" />
+    <meta property=”og:type” content="profile" />
+    <meta property="profile:first_name" content="David" />
+    <meta property="profile:last_name" content="Tchekachev" />
+    <meta property="profile:username" content="Tchekda" />
+    <meta property="profile:gender" content="Male" />
+    <meta property=”og:url” content=”https://www.tchekda.fr/” />
+    <meta property="og:description"
+        content="This is Tchekda's portfolio, presenting him, his skills, his projects, and how to contact him" />
+    <meta property="og:image" content="https://www.tchekda.fr/assets/img/Logo.png" />
 </head>
 
 <body>
@@ -519,11 +538,14 @@
             <div class="row">
                 <div class="contact-form col s12 m6">
                     <h2 class="center">Send Me a Message</h2>
-                    <form action="#" method="POST" class="form">
-                        <input class="form-input" type="text" name="name" id="name" placeholder="Name" required>
-                        <input class="form-input" type="email" name="email" id="email" placeholder="Email adress"
+                    <form class="form" id="contact_form">
+                        <input class="form-input" type="text" name="user_name" id="name" placeholder="Name" required>
+                        <input class="form-input" type="email" name="user_email" id="email" placeholder="Email adress"
                             required>
-                        <textarea class="form-textarea" name="text" id="text" placeholder="Message" required></textarea>
+                        <textarea class="form-textarea" name="message" id="text" placeholder="Message"
+                            required></textarea>
+                        <div class="g-recaptcha" data-sitekey="6Lfp7bAZAAAAAGW0eufgBFksU77zNgjkD8kjj_ek"></div>
+                        <input type="hidden" name="contact_number">
                         <button type="submit" class="btn btn-primary">Send</button>
                     </form>
                 </div>
@@ -555,5 +577,25 @@
     </footer>
 </body>
 <script src="https://kit.fontawesome.com/86f0850f53.js" crossorigin="anonymous"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("user_S4GkrC97lNnQVQomJL9Sq");
+    })();
+    window.onload = function () {
+        document.getElementById('contact_form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // generate the contact number value
+            if (grecaptcha.getResponse().length !== 0) { // reCAPTCHA success
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('poste_io', 'template_base', this);
+                document.getElementById('contact_form').reset();
+            } else {
+                alert("Please fill the captcha")
+            }
+        });
+    }
+</script>
 
 </html>
