@@ -34,7 +34,6 @@ jobs:
               with:
                 ref: master
                 fetch-depth: 10
-                submodules: true
                 persist-credentials: false
             - name: Load new code to master
               run: cp -fr /tmp/project/ ./
