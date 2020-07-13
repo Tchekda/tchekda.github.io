@@ -32,10 +32,11 @@ jobs:
                   ref: gh-pages
                   fetch-depth: 1
             
-            - name: Move compiled CSS to path within gh-pages branch and debug
+            - name: Clean CSS folder + Move compiled CSS to path within gh-pages branch and debug
               run: |
-                mv /tmp/www.tchekda.fr/assets/css assets/css/
-                ls -lsah assets/
+                rm -rfv assets/css
+                mv /tmp/www.tchekda.fr/assets/css/* -f assets/css
+                ls -lsah assets/css/
             
             - name: Add and Commit changes to gh-pages branch
               run: |
