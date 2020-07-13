@@ -30,10 +30,12 @@ jobs:
               uses: actions/checkout@v2
               with:
                 ref: master
-            - name: Load new code to master
+            - name: Load new code to master and debug
               run: |
                 cp -fvr /tmp/project/* ./
                 rm -rf tmp/
+                rm -rf project/
+                ls -lsah
             - name: Add and Commit changes to master branch
               run: |
                 git config --local user.email 'action@github.com'
