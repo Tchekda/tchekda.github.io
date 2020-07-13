@@ -10,13 +10,15 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout master Git branch
+            - name: Checkout gh-pages Git branch
               uses: actions/checkout@v2
               with:
-                ref: master
+                ref: gh-pages
                 fetch-depth: 10
                 submodules: true
                 persist-credentials: false
+            - name: Merge Master branch
+              run: git merge origin/master
             - name: Installing compass
               run: |
                 sudo gem install sass
@@ -25,17 +27,13 @@ jobs:
               run: |
                 compass compile -e production
                 ls -lsah assets/css/
-           
             - name: Add and Commit changes
               run: |
                 git config --local user.email 'action@github.com'
                 git config --local user.name 'GitHub Action'
                 git add -f assets/css/*
-            
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@releases/v3
-              with:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                BRANCH: gh-pages # The branch the action should deploy to.
-                FOLDER: . # The folder the action should deploy.
-                
+            - name: Push changes
+            uses: ad-m/github-push-action@master
+            with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              branch: gh-pages
