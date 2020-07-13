@@ -23,9 +23,8 @@ jobs:
                 sudo gem install compass
             - name: Compile CSS from SCSS files and debug
               run: |
-                compass compile -e production --css-dir=/tmp/project/assets/css --sourcemap=auto
+                compass compile -e production --css-dir=/tmp/project/assets/css
                 ls -lsah /tmp/project/assets/css/
-                ls -lsah
             - name: Checkout master Git branch
               uses: actions/checkout@v2
               with:
@@ -36,6 +35,8 @@ jobs:
                 rm -rf tmp/
                 rm -rf project/
                 ls -lsah
+            - name: Fix sourcemap
+              run: sed -i 's/\/\.\.\/\.\.\/\.\.\/home\/runner\/work\/tchekda\.github\.io\/tchekda\.github\.io\/assets//g' assets/css/index.css.map
             - name: Add and Commit changes to master branch
               run: |
                 git config --local user.email 'action@github.com'
