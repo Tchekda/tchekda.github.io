@@ -28,12 +28,11 @@ jobs:
               run: |
                 compass compile -e production --css-dir=/tmp/project/assets/css
                 ls -lsah /tmp/project/assets/css/
+                ls -lsah
             - name: Checkout master Git branch
               uses: actions/checkout@v2
               with:
                 ref: master
-                fetch-depth: 10
-                persist-credentials: false
             - name: Load new code to master
               run: |
               cp -fvr /tmp/project/* ./
