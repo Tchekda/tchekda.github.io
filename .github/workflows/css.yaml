@@ -22,16 +22,20 @@ jobs:
               run: |
                 sudo gem install sass
                 sudo gem install compass
-            - name: Compile CSS from SCSS files
-              run: compass compile -e production 
+            - name: Compile CSS from SCSS files and debug
+              run: |
+                compass compile -e production --css-dir=/tmp/www.tchekda.fr/assets/css/
+                ls -lsah /tmp/www.tchekda.fr/assets/css/
             - name: Checkout destination Git branch
               uses: actions/checkout@v2
               with:
                   ref: gh-pages
                   fetch-depth: 1
             
-            - name: Move compiled CSS to path within pr-pages branch
-              run: mv /tmp/www.tchekda.fr/assets/css assets/
+            - name: Move compiled CSS to path within pr-pages branch and debug
+              run: |
+                mv /tmp/www.tchekda.fr/assets/css assets/
+                ls -lsah assets/
             
             - name: Add and Commit changes to pr-pages branch
               run: |
