@@ -18,6 +18,9 @@ jobs:
 
             - name: Make destination directory for compiled CSS
               run: mkdir -vp /tmp/www.tchekda.fr/assets/css
+            - name: Installing compass
+              run: |
+                gem uninstall sass
             - name: Compile CSS from SCSS files
               uses: gha-utilities/sass-build@v0.2.6
               with:
