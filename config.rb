@@ -9,6 +9,6 @@ images_dir = "assets/img"
 output_style = (environment == :production) ? :compressed : :expanded
 
 
-relative_assets = false
+relative_assets = true
 line_comments = false
 sourcemap = true
