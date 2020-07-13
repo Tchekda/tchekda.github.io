@@ -23,7 +23,7 @@ jobs:
                 sudo gem install compass
             - name: Compile CSS from SCSS files and debug
               run: |
-                compass compile -e production --css-dir=/tmp/project/assets/css
+                compass compile -e production --css-dir=/tmp/project/assets/css --sourcemap=auto
                 ls -lsah /tmp/project/assets/css/
                 ls -lsah
             - name: Checkout master Git branch
