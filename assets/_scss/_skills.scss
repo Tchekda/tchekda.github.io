@@ -1,15 +1,11 @@
 .skills {
+
     &-text {
-        width: 38vw;
         float: left;
-
-
     }
 
     &-progress {
-        width: 25vw;
         float: left;
-        margin: 0 50px 0 0;
 
         .progress {
             margin-bottom: 30px;

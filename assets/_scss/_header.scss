@@ -19,7 +19,7 @@
     }
 
     &-baseline {
-        margin: 210px 0 90px 0;
+        margin: 20% 0 15% 0;
         font-weight: 300;
         text-transform: uppercase;
         line-height: 1.2;
@@ -27,13 +27,13 @@
             display: block;
             &1 {
                 font-weight: 700;
-                font-size: 70px;
+                font-size: 1.2em;
             }
             &2{
-                font-size: 30px;
+                font-size: 0.75em;
             }
             &3 {
-                font-size: 40px; 
+                font-size: 1em; 
                 padding-top: 20px;
             }
         }
@@ -51,14 +51,14 @@
     &-item {
         @include transition-duration;
 
-        &:first-child::before {
+        &:last-child::after {
             display: none;
         }
 
-        &:before {
+        &:after {
             content: "-";
             display: inline-block;
-            padding: 0 37px;
+            padding: 0 5%;
             color: white;
         }
 
