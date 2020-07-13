@@ -1,0 +1,32 @@
+.projects {
+    margin: 0 -30px;
+
+    &-item {
+        //width: 30vw;
+        float: left;
+        //position: relative;
+        margin-bottom: 150px;
+    }
+    &-thumb {
+        img {
+            width: 100%;
+        }
+    }
+
+    &-info {
+        width: 70%;
+        padding: 7px 20px;
+        background-color: white;
+        //position: absolute;
+        //top: 330px;
+        //right: 0;
+        text-align: justify;
+    }
+
+    &-meta {
+        padding-top: 20px;
+        font-size: 14px;
+        //width: 125px;
+        text-align: left;
+    }
+}

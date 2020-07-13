@@ -1,0 +1,36 @@
+.skills {
+
+    &-text {
+        float: left;
+    }
+
+    &-progress {
+        float: left;
+
+        .progress {
+            margin-bottom: 30px;
+
+            &-title {
+                line-height: 40px;
+
+                strong {
+                    color: $primary;
+                }
+            }
+
+            &-bar {
+                height: 10px;
+                background-color: rgb(172, 172, 172);
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}

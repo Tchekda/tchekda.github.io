@@ -1,0 +1,70 @@
+.header {
+    padding: 70px 0 170px 0;
+    background: url(/assets/img/header.png) center top fixed;
+    @include background-size(cover);
+    color: white;
+    text-align: center;
+
+    &-logo {
+        display: block;
+        padding-top: 10px;
+        float: left;
+
+        img {
+            border-radius: 50%;
+            border: 2px solid white;
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    &-baseline {
+        margin: 20% 0 15% 0;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 1.2;
+        &-l {
+            display: block;
+            &1 {
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+            &2{
+                font-size: 0.75em;
+            }
+            &3 {
+                font-size: 1em; 
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.menu {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 53px;
+    float: right;
+    text-align: right;
+
+
+    &-item {
+        @include transition-duration;
+
+        &:last-child::after {
+            display: none;
+        }
+
+        &:after {
+            content: "-";
+            display: inline-block;
+            padding: 0 5%;
+            color: white;
+        }
+
+        &:hover,
+        &.is-active {
+            color: $green;
+        }
+    }
+}
