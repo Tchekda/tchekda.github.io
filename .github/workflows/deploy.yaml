@@ -35,7 +35,9 @@ jobs:
                 fetch-depth: 10
                 persist-credentials: false
             - name: Load new code to master
-              run: cp -fvr /tmp/project/* ./
+              run: |
+              cp -fvr /tmp/project/* ./
+              rm -rf tmp/
             - name: Add and Commit changes to master branch
               run: |
                 git config --local user.email 'action@github.com'
