@@ -20,8 +20,8 @@ jobs:
               run: mkdir -vp /tmp/www.tchekda.fr/assets/css
             - name: Installing compass
               run: |
-                gem uninstall sass
-                gem uninstall compass
+                gem install sass
+                gem install compass
             - name: Compile CSS from SCSS files
               uses: gha-utilities/sass-build@v0.2.6
               with:
