@@ -21,7 +21,7 @@ jobs:
             - name: Compile CSS from SCSS files
               uses: gha-utilities/sass-build@v0.2.6
               with:
-                source: _scss/index.scss
+                source: assets/_scss/index.scss
                 destination: /tmp/www.tchekda.fr/assets/css/index.css
             
             - name: Checkout destination Git branch
