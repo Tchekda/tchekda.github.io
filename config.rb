@@ -3,7 +3,7 @@ require 'compass/import-once/activate'
 http_path = "/"
 
 if environment == :production
-   css_dir = "/tmp/www.tchekda.fr/assets/css"  
+   css_dir = "assets/css"  
    output_style = :compressed
    sourcemap = true
 else

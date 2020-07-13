@@ -1,0 +1,41 @@
+name: Build SASS and deploy
+on:
+    push:
+        branches:
+            - master
+  
+  
+jobs:
+    build_css:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout master Git branch
+              uses: actions/checkout@v2
+              with:
+                ref: master
+                fetch-depth: 10
+                submodules: true
+                persist-credentials: false
+            - name: Installing compass
+              run: |
+                sudo gem install sass
+                sudo gem install compass
+            - name: Compile CSS from SCSS files and debug
+              run: |
+                compass compile -e production
+                ls -lsah assets/css/
+           
+            - name: Add and Commit changes
+              run: |
+                git config --local user.email 'action@github.com'
+                git config --local user.name 'GitHub Action'
+                git add -f assets/css/*
+            
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@releases/v3
+              with:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                BRANCH: gh-pages # The branch the action should deploy to.
+                FOLDER: . # The folder the action should deploy.
+                
