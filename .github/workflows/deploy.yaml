@@ -10,6 +10,10 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Reset gh-pages branch
+              run: |
+                git branch -D gh-pages
+                git branch gh-pages
             - name: Checkout gh-pages Git branch
               uses: actions/checkout@v2
               with:
@@ -17,8 +21,6 @@ jobs:
                 fetch-depth: 10
                 submodules: true
                 persist-credentials: false
-            - name: Merge Master branch
-              run: git merge origin/master
             - name: Installing compass
               run: |
                 sudo gem install sass
