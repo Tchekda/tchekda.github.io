@@ -21,6 +21,7 @@ jobs:
             - name: Installing compass
               run: |
                 gem uninstall sass
+                gem uninstall compass
             - name: Compile CSS from SCSS files
               uses: gha-utilities/sass-build@v0.2.6
               with:
