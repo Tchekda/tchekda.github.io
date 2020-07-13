@@ -1,17 +1,14 @@
 require 'compass/import-once/activate'
 
+project_path = "./"
 http_path = "/"
-
-if environment == :production
-   css_dir = "assets/css"  
-   output_style = :compressed
-   sourcemap = true
-else
-   output_style = :expanded
-   css_dir = "assets/css"  
-end
+css_dir = "assets/css" 
 sass_dir = "assets/_scss"
+images_dir = "assets/img"
+
+output_style = (environment == :production) ? :compressed : :expanded
 
 
-relative_assets = true
+relative_assets = false
 line_comments = false
+sourcemap = true
