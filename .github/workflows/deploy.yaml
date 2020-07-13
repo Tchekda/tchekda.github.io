@@ -11,12 +11,12 @@ jobs:
 
         steps:
             - name: Checkout master Git branch
-                uses: actions/checkout@v2
-                with:
-                  ref: master
-                  fetch-depth: 10
-                  submodules: true
-                  persist-credentials: false
+              uses: actions/checkout@v2
+              with:
+                ref: master
+                fetch-depth: 10
+                submodules: true
+                persist-credentials: false
             - name: Reset gh-pages branch
               run: |
                 git branch -D gh-pages
