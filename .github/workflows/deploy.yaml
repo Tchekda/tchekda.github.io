@@ -2,7 +2,7 @@ name: Build SASS and deploy
 on:
     push:
         branches:
-            - master
+            - dev
   
   
 jobs:
@@ -10,6 +10,25 @@ jobs:
         runs-on: ubuntu-latest
         name: Build SASS
         steps:
+            - name: Checkout dev Git branch
+              uses: actions/checkout@v2
+              with:
+                ref: dev
+                fetch-depth: 10
+                submodules: true
+                persist-credentials: false
+            - name: Make destination directory for compiled project
+              run: |
+                mkdir -vp /tmp/project/
+                cp -r ./ /tmp/project/
+            - name: Installing compass
+              run: |
+                sudo gem install sass
+                sudo gem install compass
+            - name: Compile CSS from SCSS files and debug
+              run: |
+                compass compile -e production --css-dir=/tmp/project/assets/css
+                ls -lsah /tmp/project/assets/css/
             - name: Checkout master Git branch
               uses: actions/checkout@v2
               with:
@@ -17,18 +36,13 @@ jobs:
                 fetch-depth: 10
                 submodules: true
                 persist-credentials: false
-            - name: Installing compass
-              run: |
-                sudo gem install sass
-                sudo gem install compass
-            - name: Compile CSS from SCSS files and debug
-              run: |
-                compass compile -e production
-                ls -lsah assets/css/
-            - name: Add and Commit changes
+            - name: Load new code to master
+              run: cp -fr /tmp/project/ ./
+            - name: Add and Commit changes to master branch
               run: |
                 git config --local user.email 'action@github.com'
                 git config --local user.name 'GitHub Action'
+                git add .
                 git add -f assets/css/*
                 git commit -m 'Updates compiled CSS files'
             - name: Push changes to master
