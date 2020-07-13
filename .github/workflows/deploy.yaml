@@ -8,30 +8,12 @@ on:
 jobs:
     build_css:
         runs-on: ubuntu-latest
-
+        name: Build SASS
         steps:
             - name: Checkout master Git branch
               uses: actions/checkout@v2
               with:
                 ref: master
-                fetch-depth: 10
-                submodules: true
-                persist-credentials: false
-            - name: Delete gh-pages branch
-              uses: dawidd6/action-delete-branch@v3
-              with:
-                github_token: ${{github.token}}
-                branches: gh-pages
-            - name: Create gh-pages branch
-              uses: peterjgrainger/action-create-branch@v1.0.0
-              env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                branch: 'gh-pages'
-            - name: Checkout gh-pages Git branch
-              uses: actions/checkout@v2
-              with:
-                ref: gh-pages
                 fetch-depth: 10
                 submodules: true
                 persist-credentials: false
@@ -49,8 +31,8 @@ jobs:
                 git config --local user.name 'GitHub Action'
                 git add -f assets/css/*
                 git commit -m 'Updates compiled CSS files'
-            - name: Push changes
+            - name: Push changes to master
               uses: ad-m/github-push-action@master
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
-                branch: gh-pages
+                branch: master
