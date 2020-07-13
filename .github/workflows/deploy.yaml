@@ -4,7 +4,6 @@ on:
         branches:
             - dev
   
-  
 jobs:
     build_css:
         runs-on: ubuntu-latest
@@ -37,7 +36,7 @@ jobs:
                 submodules: true
                 persist-credentials: false
             - name: Load new code to master
-              run: cp -fr /tmp/project/ ./
+              run: cp -fvr /tmp/project/* ./
             - name: Add and Commit changes to master branch
               run: |
                 git config --local user.email 'action@github.com'
