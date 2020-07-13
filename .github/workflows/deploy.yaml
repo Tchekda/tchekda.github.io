@@ -17,10 +17,17 @@ jobs:
                 fetch-depth: 10
                 submodules: true
                 persist-credentials: false
-            - name: Reset gh-pages branch
-              run: |
-                git branch -D gh-pages
-                git branch gh-pages
+            - name: Delete gh-pages branch
+              uses: dawidd6/action-delete-branch@v3
+              with:
+                github_token: ${{github.token}}
+                branches: gh-pages
+            - name: Create gh-pages branch
+              uses: peterjgrainger/action-create-branch@v1.0.0
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                branch: 'gh-pages'
             - name: Checkout gh-pages Git branch
               uses: actions/checkout@v2
               with:
