@@ -5,31 +5,22 @@
     }
 
     &-progress {
-        float: left;
-
         .progress {
-            margin-bottom: 30px;
 
             &-title {
                 line-height: 40px;
-
-                strong {
-                    color: $primary;
-                }
+                font-weight: bold;
+                color: $primary;
+                text-align: left;
+                width: 50%;
+                margin: 0;
+                display: inline-block;
             }
 
-            &-bar {
-                height: 10px;
-                background-color: rgb(172, 172, 172);
-                position: relative;
-
-                span {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $green;
-                }
+            &-value {
+                display: inline-block;
+                width: 40%;
+                text-align: right;
             }
         }
     }

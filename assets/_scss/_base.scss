@@ -33,12 +33,13 @@ p{
     padding: 0;
     margin: 0 0 20px 0 ;
     font-weight: bold;
+    line-height: 2;
 }
 
 hr {
     height: 2px;
     border: none;
-    background-color: $green;
+    background-color: $secondary;
     margin: 115px 0;
 }
 
