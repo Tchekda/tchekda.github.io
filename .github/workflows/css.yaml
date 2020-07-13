@@ -35,7 +35,7 @@ jobs:
             - name: Clean CSS folder + Move compiled CSS to path within gh-pages branch and debug
               run: |
                 rm -rfv assets/css
-                mv /tmp/www.tchekda.fr/assets/css/* -f assets/css
+                mv /tmp/www.tchekda.fr/assets/css -f assets/
                 ls -lsah assets/css/
             
             - name: Add and Commit changes to gh-pages branch
