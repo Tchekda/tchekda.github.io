@@ -42,5 +42,9 @@
         font-size: 14px;
         //width: 125px;
         text-align: left;
+        a {
+            color: $secondary;
+            font-weight: bold;
+        }
     }
 }
