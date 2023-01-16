@@ -3,7 +3,8 @@
     margin: 0 auto;
     z-index: 5;
     position: relative;
-    @include clearfix;
+    overflow:hidden;
+    *zoom:1
 }
 
 // 11. Global

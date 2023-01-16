@@ -1,5 +1,5 @@
 * {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 body {
@@ -26,7 +26,8 @@ a {
 }
 
 strong {
-    font-weight: 700;
+    font-weight: 900;
+    color: #2ecc71;
 }
 
 p{

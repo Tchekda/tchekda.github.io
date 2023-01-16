@@ -1,0 +1,17 @@
+{
+  "name": "tchekda.github.io",
+  "version": "1.0.0",
+  "description": "Tchekda Portfolio",
+  "main": "index.js",
+  "repository": "git@github.com:Tchekda/tchekda.github.io.git",
+  "author": "David Tchekachev <contact@tchekda.fr>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.57.1"
+  },
+  "scripts": {
+    "dev": "sass --watch --no-source-map  assets/_scss/index.scss:assets/css/index.css",
+    "release": "sass -s compressed assets/_scss/index.scss assets/css/index.css"
+  }
+}

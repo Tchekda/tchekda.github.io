@@ -1,7 +1,10 @@
 .header {
     padding: 70px 0 170px 0;
     background: url(/assets/img/header.png) center top fixed;
-    @include background-size(cover);
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
     color: white;
     text-align: center;
 
@@ -23,17 +26,21 @@
         font-weight: 300;
         text-transform: uppercase;
         line-height: 1.2;
+
         &-l {
             display: block;
+
             &1 {
                 font-weight: 700;
                 font-size: 1.2em;
             }
-            &2{
+
+            &2 {
                 font-size: 0.75em;
             }
+
             &3 {
-                font-size: 1em; 
+                font-size: 1em;
                 padding-top: 20px;
             }
         }
@@ -49,7 +56,10 @@
 
 
     &-item {
-        @include transition-duration;
+        -moz-transition-duration: .3s;
+        -o-transition-duration: .3s;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
 
         &:last-child::after {
             display: none;
