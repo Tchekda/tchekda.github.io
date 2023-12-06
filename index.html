@@ -78,7 +78,7 @@
       <div class="about row center-on-small-only">
         <div class="about-text col s12 m9">
           <p>
-            My name is David Tchekachev (a.k.a <i>Tchekda</i> on the Internet) and I'm a 20 year-old computer science
+            My name is David Tchekachev (a.k.a <i>Tchekda</i> on the Internet) and I'm a 21 year-old computer science
             student at <a href="https://www.epita.fr/en" target="_blank">EPITA</a>, a 5-year engineering university.
             Currently seeking a Software Engineering internship from <strong>September 2024 until February 2025</strong>
           </p>
@@ -355,30 +355,96 @@
         <p class="col s12 m10 center-on-small-only">What did I work on</p>
       </div>
       <div class="projects row center">
-        <div class="projects-item col s12 m6">
+        <div class="projects-item col s12">
           <div class="projects-thumb">
             <img loading="lazy" src="/assets/img/ivao.png" alt="IVAO Webeye screenshot" />
           </div>
           <div class="row">
-            <div class="projects-info col s12 m9">
+            <div class="projects-info col s12 m11">
               <div class="projects-title">
-                <h2>IVAO Web Systems</h2>
+                <h2>IVAO Web Manager</h2>
                 <p>January 2021 - Now</p>
               </div>
               <p class="projects-content">
                 Web Team Manager in the Development Operations department. I'm in charge of the overview,
                 supervision, assignement, deployment, testing, validation and maintenance of the IVAO Web Systems. Being
                 part of this organization has given me the opportunity to work with a lot of different technologies,
-                people and problematics to solve, such as high-availability and resilience since our systems are visited
-                by thousands of people with more than hundreds requests per second.
+                people and problematics to solve on our systems which are visited by thousands of people every day.
               </p>
+              <ul class="projects-list">
+                <li><u>Backend</u>: PHP (Laravel), Rust, NodeJS (NestJS), Python</li>
+                <li><u>Frontend</u>: Javascript (ReactJS)</li>
+                <li><u>Database</u>: MySQL, MongoDB, Redis</li>
+                <li><u>DevOps</u>: Docker, Kubernetes, GitHub Actions</li>
+                <li><u>Observability</u>: Prometheus, Loki, Grafana, OpenTelemetry</li>
+                <li><u>Public and Internal API interactions</u>: REST <small>(>200 reqs/sec)</small> & RabbitMQ
+                  <small>(200 msg/sec)</small></li>
+                <li><u>Team leader</u>: Documentation, Code Review, Onboarding, Coordination with other teams</li>
+                <li><u>Main projects</u>: <ul>
+                    <li><a target="_blank" href="https://wiki.ivao.aero/en/home/devops/api/oauth-request">In-house OAuth
+                        provider</a></li>
+                    <li><a target="_blank" href="https://sso.ivao.aero">Custom SSO</a></li>
+                    <li><a target="_blank" href="https://webeye.ivao.aero">Webeye: Live network visualization</a></li>
+                    <li><a target="_blank" href="https://api.ivao.aero/docs">Open and documented APIs</a></li>
+                  </ul>
+                </li>
+              </ul>
 
             </div>
-            <div class="projects-meta col s12 m3 center-on-small-only">
+            <div class="projects-meta col s12 m1 center-on-small-only">
               For <a href="https://ivao.aero/" target="_blank">IVAO</a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="projects row center">
+        
+        <div class="projects-item col s12 m6">
+          <a href="https://github.com/Tchekda/Avenir" class="projects-thumb">
+            <img loading="lazy" src="/assets/img/avenir.jpg" alt="Students with computers" />
+          </a>
+          <div class="row">
+            <div class="projects-info col s12 m9">
+              <div class="projects-title">
+                <h2>"Avenir" Platform</h2>
+                <p>April 2020 - <b>Now</b></p>
+              </div>
+              <p class="projects-content">
+                Highschool platform replacing the paper version of "Fiche Navette" used to collect student's wish for
+                next year's options. With a complete backoffice to configure everything, with common import/export
+                formats and a dashboard for teachers.
+              </p>
+              <a href="http://lycee.tchekda.fr/" target="_blank" class="btn btn-primary">Product Page</a>
+            </div>
+            <div class="projects-meta col s12 m3 center-on-small-only">
+              For highschools
+            </div>
+          </div>
+        </div>
+        <div class="projects-item col s12 m6">
+          <a href="https://kardz.biz" class="projects-thumb">
+            <img loading="lazy" src="/assets/img/deloitte.png" alt="Kardz virtual profile screenshot" />
+          </a>
+          <div class="row">
+            <div class="projects-info col s12 m9">
+              <div class="projects-title">
+                <h2>Deloitte Luxembourg</h2>
+                <p>June 2023 - Aug 2023</p>
+              </div>
+              <p class="projects-content">
+                During a summer internship at Deloitte Luxembourg, I lead the development of an internal application in
+                coordination with the UI/UX team while reporting to the company's stakeholders. This project was a great
+                opportunity to learn how to work in a big company and how to manage a project from A to Z. <br>
+                Also, I had the opportunity to drive some research on Generative AI and how it could be used in such big company.
+              </p>
+            </div>
+            <div class="projects-meta col s12 m3 center-on-small-only">
+              For <a href="https://www2.deloitte.com/lu/en.html" target="_blank">Deloitte Luxembourg</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects row center">
         <div class="projects-item col s12 m6">
           <a href="https://kardz.biz" class="projects-thumb">
             <img loading="lazy" src="/assets/img/kardz.png" alt="Kardz virtual profile screenshot" />
@@ -387,7 +453,7 @@
             <div class="projects-info col s12 m9">
               <div class="projects-title">
                 <h2>Preen.Me - Aggaeus</h2>
-                <p>Dec 2022 - Now</p>
+                <p>Dec 2022 - May 2023</p>
               </div>
               <p class="projects-content">
                 Joined the team as a technical IT consultant & developer to create proof-of-concepts (PoCs) and website
@@ -404,8 +470,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="projects row center">
         <div class="projects-item col s12 m6">
           <div class="projects-thumb">
             <img loading="lazy" src="/assets/img/atc.jpg" alt="Air traffic controller" />
@@ -414,7 +478,7 @@
             <div class="projects-info col s12 m9">
               <div class="projects-title">
                 <h2>Internal Automation Tools</h2>
-                <p>August 2021 - Now</p>
+                <p>August 2021 - Dec 2021</p>
               </div>
               <p class="projects-content">
                 Automating and optimizing repetitive tasks while providing some insights on processes by analyzing
@@ -426,30 +490,6 @@
             </div>
             <div class="projects-meta col s12 m3 center-on-small-only">
               For <a href="https://www.ambitiontelecom.com/" target="_blank">AT&R</a>
-            </div>
-          </div>
-        </div>
-        <div class="projects-item col s12 m6">
-          <a href="https://github.com/Tchekda/Avenir" class="projects-thumb">
-            <img loading="lazy" src="/assets/img/avenir.jpg" alt="Students with computers" />
-          </a>
-          <div class="row">
-            <div class="projects-info col s12 m9">
-              <div class="projects-title">
-                <h2>"Avenir" Platform</h2>
-                <p>April 2020 - May 2021</p>
-              </div>
-              <p class="projects-content">
-                Highschool platform replacing the paper version of "Fiche Navette" used to collect student's wish for
-                next year's options. With a complete backoffice to configure everything, with common import/export
-                formats and a dashboard for teachers.
-              </p>
-              <a href="http://lycee.tchekda.fr/" target="_blank" class="btn btn-primary">Product Page</a>
-            </div>
-            <div class="projects-meta col s12 m3 center-on-small-only">
-              1 year
-              <br />
-              For highschools
             </div>
           </div>
         </div>
@@ -509,7 +549,7 @@
               </p>
             </div>
             <div class="projects-meta col s12 m3 center-on-small-only">
-              1 month<br />
+              3 month<br />
               Curiosity
             </div>
           </div>
