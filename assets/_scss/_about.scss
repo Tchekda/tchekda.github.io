@@ -23,11 +23,15 @@
         }
         a {
             color: $secondary;
+            font-weight: bold;
         }
         ul {
             display: flex;
             flex-direction: column;
             gap: 30px;
+        }
+        p {
+            font-weight: normal;
         }
     }
 
