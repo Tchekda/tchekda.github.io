@@ -7,19 +7,23 @@
     &-progress {
         .progress {
 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media #{$medium-and-up} {
+                margin: 0 25px;
+            }
+
             &-title {
                 line-height: 40px;
                 font-weight: bold;
                 color: $primary;
                 text-align: left;
-                width: 60%;
                 margin: 0;
-                display: inline-block;
             }
 
             &-value {
-                display: inline-block;
-                width: 30%;
                 text-align: right;
             }
         }

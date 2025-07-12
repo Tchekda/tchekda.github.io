@@ -63,10 +63,12 @@ hr {
   height: 2px;
   border: none;
   background-color: #2ecc71;
-  margin: 115px 0;
+  margin: 20px 0;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   outline: none;
   -webkit-appearance: none;
   border-radius: 0;
@@ -3277,18 +3279,24 @@ input, textarea, button {
 .skills-text {
   float: left;
 }
+.skills-progress .progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width : 601px) {
+  .skills-progress .progress {
+    margin: 0 25px;
+  }
+}
 .skills-progress .progress-title {
   line-height: 40px;
   font-weight: bold;
   color: #4f0b0b;
   text-align: left;
-  width: 60%;
   margin: 0;
-  display: inline-block;
 }
 .skills-progress .progress-value {
-  display: inline-block;
-  width: 30%;
   text-align: right;
 }
 .skills-label ul {
