@@ -95,14 +95,14 @@ button {
   position: relative;
 }
 
-@media only screen and (min-width : 601px) {
+@media only screen and (min-width: 601px) {
   .container {
     width: 85%;
     z-index: 5;
     position: relative;
   }
 }
-@media only screen and (min-width : 993px) {
+@media only screen and (min-width: 993px) {
   .container {
     width: 70%;
     z-index: 5;
@@ -130,7 +130,8 @@ button {
   padding: 0 0.75rem;
   min-height: 1px;
 }
-.row .col[class*=push-], .row .col[class*=pull-] {
+.row .col[class*="push-"],
+.row .col[class*="pull-"] {
   position: relative;
 }
 .row .col.s1 {
@@ -313,7 +314,7 @@ button {
 .row .col.push-s12 {
   left: 100%;
 }
-@media only screen and (min-width : 601px) {
+@media only screen and (min-width: 601px) {
   .row .col.m1 {
     width: 8.3333333333%;
     margin-left: auto;
@@ -495,7 +496,7 @@ button {
     left: 100%;
   }
 }
-@media only screen and (min-width : 993px) {
+@media only screen and (min-width: 993px) {
   .row .col.l1 {
     width: 8.3333333333%;
     margin-left: auto;
@@ -677,7 +678,7 @@ button {
     left: 100%;
   }
 }
-@media only screen and (min-width : 1201px) {
+@media only screen and (min-width: 1201px) {
   .row .col.xl1 {
     width: 8.3333333333%;
     margin-left: auto;
@@ -860,20 +861,20 @@ button {
   }
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width: 600px) {
   .hide-on-small-only,
   .hide-on-small-and-down {
     display: none !important;
   }
 }
 
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width: 992px) {
   .hide-on-med-and-down {
     display: none !important;
   }
 }
 
-@media only screen and (min-width : 601px) {
+@media only screen and (min-width: 601px) {
   .hide-on-med-and-up {
     display: none !important;
   }
@@ -885,25 +886,25 @@ button {
   }
 }
 
-@media only screen and (min-width : 993px) {
+@media only screen and (min-width: 993px) {
   .hide-on-large-only {
     display: none !important;
   }
 }
 
-@media only screen and (min-width : 1201px) {
+@media only screen and (min-width: 1201px) {
   .hide-on-extra-large-only {
     display: none !important;
   }
 }
 
-@media only screen and (min-width : 1201px) {
+@media only screen and (min-width: 1201px) {
   .show-on-extra-large {
     display: block !important;
   }
 }
 
-@media only screen and (min-width : 993px) {
+@media only screen and (min-width: 993px) {
   .show-on-large {
     display: block !important;
   }
@@ -915,25 +916,25 @@ button {
   }
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width: 600px) {
   .show-on-small {
     display: block !important;
   }
 }
 
-@media only screen and (min-width : 601px) {
+@media only screen and (min-width: 601px) {
   .show-on-medium-and-up {
     display: block !important;
   }
 }
 
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width: 992px) {
   .show-on-medium-and-down {
     display: block !important;
   }
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width: 600px) {
   .center-on-small-only {
     text-align: center !important;
   }
@@ -968,115 +969,115 @@ button {
 }
 
 .red {
-  background-color: #F44336 !important;
+  background-color: #f44336 !important;
 }
 
 .red-text {
-  color: #F44336 !important;
+  color: #f44336 !important;
 }
 
 .red.lighten-5 {
-  background-color: #FFEBEE !important;
+  background-color: #ffebee !important;
 }
 
 .red-text.text-lighten-5 {
-  color: #FFEBEE !important;
+  color: #ffebee !important;
 }
 
 .red.lighten-4 {
-  background-color: #FFCDD2 !important;
+  background-color: #ffcdd2 !important;
 }
 
 .red-text.text-lighten-4 {
-  color: #FFCDD2 !important;
+  color: #ffcdd2 !important;
 }
 
 .red.lighten-3 {
-  background-color: #EF9A9A !important;
+  background-color: #ef9a9a !important;
 }
 
 .red-text.text-lighten-3 {
-  color: #EF9A9A !important;
+  color: #ef9a9a !important;
 }
 
 .red.lighten-2 {
-  background-color: #E57373 !important;
+  background-color: #e57373 !important;
 }
 
 .red-text.text-lighten-2 {
-  color: #E57373 !important;
+  color: #e57373 !important;
 }
 
 .red.lighten-1 {
-  background-color: #EF5350 !important;
+  background-color: #ef5350 !important;
 }
 
 .red-text.text-lighten-1 {
-  color: #EF5350 !important;
+  color: #ef5350 !important;
 }
 
 .red.darken-1 {
-  background-color: #E53935 !important;
+  background-color: #e53935 !important;
 }
 
 .red-text.text-darken-1 {
-  color: #E53935 !important;
+  color: #e53935 !important;
 }
 
 .red.darken-2 {
-  background-color: #D32F2F !important;
+  background-color: #d32f2f !important;
 }
 
 .red-text.text-darken-2 {
-  color: #D32F2F !important;
+  color: #d32f2f !important;
 }
 
 .red.darken-3 {
-  background-color: #C62828 !important;
+  background-color: #c62828 !important;
 }
 
 .red-text.text-darken-3 {
-  color: #C62828 !important;
+  color: #c62828 !important;
 }
 
 .red.darken-4 {
-  background-color: #B71C1C !important;
+  background-color: #b71c1c !important;
 }
 
 .red-text.text-darken-4 {
-  color: #B71C1C !important;
+  color: #b71c1c !important;
 }
 
 .red.accent-1 {
-  background-color: #FF8A80 !important;
+  background-color: #ff8a80 !important;
 }
 
 .red-text.text-accent-1 {
-  color: #FF8A80 !important;
+  color: #ff8a80 !important;
 }
 
 .red.accent-2 {
-  background-color: #FF5252 !important;
+  background-color: #ff5252 !important;
 }
 
 .red-text.text-accent-2 {
-  color: #FF5252 !important;
+  color: #ff5252 !important;
 }
 
 .red.accent-3 {
-  background-color: #FF1744 !important;
+  background-color: #ff1744 !important;
 }
 
 .red-text.text-accent-3 {
-  color: #FF1744 !important;
+  color: #ff1744 !important;
 }
 
 .red.accent-4 {
-  background-color: #D50000 !important;
+  background-color: #d50000 !important;
 }
 
 .red-text.text-accent-4 {
-  color: #D50000 !important;
+  color: #d50000 !important;
 }
 
 .pink {
@@ -1528,115 +1529,115 @@ button {
 }
 
 .blue {
-  background-color: #2196F3 !important;
+  background-color: #2196f3 !important;
 }
 
 .blue-text {
-  color: #2196F3 !important;
+  color: #2196f3 !important;
 }
 
 .blue.lighten-5 {
-  background-color: #E3F2FD !important;
+  background-color: #e3f2fd !important;
 }
 
 .blue-text.text-lighten-5 {
-  color: #E3F2FD !important;
+  color: #e3f2fd !important;
 }
 
 .blue.lighten-4 {
-  background-color: #BBDEFB !important;
+  background-color: #bbdefb !important;
 }
 
 .blue-text.text-lighten-4 {
-  color: #BBDEFB !important;
+  color: #bbdefb !important;
 }
 
 .blue.lighten-3 {
-  background-color: #90CAF9 !important;
+  background-color: #90caf9 !important;
 }
 
 .blue-text.text-lighten-3 {
-  color: #90CAF9 !important;
+  color: #90caf9 !important;
 }
 
 .blue.lighten-2 {
-  background-color: #64B5F6 !important;
+  background-color: #64b5f6 !important;
 }
 
 .blue-text.text-lighten-2 {
-  color: #64B5F6 !important;
+  color: #64b5f6 !important;
 }
 
 .blue.lighten-1 {
-  background-color: #42A5F5 !important;
+  background-color: #42a5f5 !important;
 }
 
 .blue-text.text-lighten-1 {
-  color: #42A5F5 !important;
+  color: #42a5f5 !important;
 }
 
 .blue.darken-1 {
-  background-color: #1E88E5 !important;
+  background-color: #1e88e5 !important;
 }
 
 .blue-text.text-darken-1 {
-  color: #1E88E5 !important;
+  color: #1e88e5 !important;
 }
 
 .blue.darken-2 {
-  background-color: #1976D2 !important;
+  background-color: #1976d2 !important;
 }
 
 .blue-text.text-darken-2 {
-  color: #1976D2 !important;
+  color: #1976d2 !important;
 }
 
 .blue.darken-3 {
-  background-color: #1565C0 !important;
+  background-color: #1565c0 !important;
 }
 
 .blue-text.text-darken-3 {
-  color: #1565C0 !important;
+  color: #1565c0 !important;
 }
 
 .blue.darken-4 {
-  background-color: #0D47A1 !important;
+  background-color: #0d47a1 !important;
 }
 
 .blue-text.text-darken-4 {
-  color: #0D47A1 !important;
+  color: #0d47a1 !important;
 }
 
 .blue.accent-1 {
-  background-color: #82B1FF !important;
+  background-color: #82b1ff !important;
 }
 
 .blue-text.text-accent-1 {
-  color: #82B1FF !important;
+  color: #82b1ff !important;
 }
 
 .blue.accent-2 {
-  background-color: #448AFF !important;
+  background-color: #448aff !important;
 }
 
 .blue-text.text-accent-2 {
-  color: #448AFF !important;
+  color: #448aff !important;
 }
 
 .blue.accent-3 {
-  background-color: #2979FF !important;
+  background-color: #2979ff !important;
 }
 
 .blue-text.text-accent-3 {
-  color: #2979FF !important;
+  color: #2979ff !important;
 }
 
 .blue.accent-4 {
-  background-color: #2962FF !important;
+  background-color: #2962ff !important;
 }
 
 .blue-text.text-accent-4 {
-  color: #2962FF !important;
+  color: #2962ff !important;
 }
 
 .light-blue {
@@ -1976,115 +1977,115 @@ button {
 }
 
 .green {
-  background-color: #4CAF50 !important;
+  background-color: #4caf50 !important;
 }
 
 .green-text {
-  color: #4CAF50 !important;
+  color: #4caf50 !important;
 }
 
 .green.lighten-5 {
-  background-color: #E8F5E9 !important;
+  background-color: #e8f5e9 !important;
 }
 
 .green-text.text-lighten-5 {
-  color: #E8F5E9 !important;
+  color: #e8f5e9 !important;
 }
 
 .green.lighten-4 {
-  background-color: #C8E6C9 !important;
+  background-color: #c8e6c9 !important;
 }
 
 .green-text.text-lighten-4 {
-  color: #C8E6C9 !important;
+  color: #c8e6c9 !important;
 }
 
 .green.lighten-3 {
-  background-color: #A5D6A7 !important;
+  background-color: #a5d6a7 !important;
 }
 
 .green-text.text-lighten-3 {
-  color: #A5D6A7 !important;
+  color: #a5d6a7 !important;
 }
 
 .green.lighten-2 {
-  background-color: #81C784 !important;
+  background-color: #81c784 !important;
 }
 
 .green-text.text-lighten-2 {
-  color: #81C784 !important;
+  color: #81c784 !important;
 }
 
 .green.lighten-1 {
-  background-color: #66BB6A !important;
+  background-color: #66bb6a !important;
 }
 
 .green-text.text-lighten-1 {
-  color: #66BB6A !important;
+  color: #66bb6a !important;
 }
 
 .green.darken-1 {
-  background-color: #43A047 !important;
+  background-color: #43a047 !important;
 }
 
 .green-text.text-darken-1 {
-  color: #43A047 !important;
+  color: #43a047 !important;
 }
 
 .green.darken-2 {
-  background-color: #388E3C !important;
+  background-color: #388e3c !important;
 }
 
 .green-text.text-darken-2 {
-  color: #388E3C !important;
+  color: #388e3c !important;
 }
 
 .green.darken-3 {
-  background-color: #2E7D32 !important;
+  background-color: #2e7d32 !important;
 }
 
 .green-text.text-darken-3 {
-  color: #2E7D32 !important;
+  color: #2e7d32 !important;
 }
 
 .green.darken-4 {
-  background-color: #1B5E20 !important;
+  background-color: #1b5e20 !important;
 }
 
 .green-text.text-darken-4 {
-  color: #1B5E20 !important;
+  color: #1b5e20 !important;
 }
 
 .green.accent-1 {
-  background-color: #B9F6CA !important;
+  background-color: #b9f6ca !important;
 }
 
 .green-text.text-accent-1 {
-  color: #B9F6CA !important;
+  color: #b9f6ca !important;
 }
 
 .green.accent-2 {
-  background-color: #69F0AE !important;
+  background-color: #69f0ae !important;
 }
 
 .green-text.text-accent-2 {
-  color: #69F0AE !important;
+  color: #69f0ae !important;
 }
 
 .green.accent-3 {
-  background-color: #00E676 !important;
+  background-color: #00e676 !important;
 }
 
 .green-text.text-accent-3 {
-  color: #00E676 !important;
+  color: #00e676 !important;
 }
 
 .green.accent-4 {
-  background-color: #00C853 !important;
+  background-color: #00c853 !important;
 }
 
 .green-text.text-accent-4 {
-  color: #00C853 !important;
+  color: #00c853 !important;
 }
 
 .light-green {
@@ -3008,11 +3009,11 @@ button {
 }
 
 .white {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
 }
 
 .white-text {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .transparent {
@@ -3064,6 +3065,10 @@ button {
   font-size: 1em;
   padding-top: 20px;
 }
+.header-baseline-l4 {
+  font-size: 0.5em;
+  padding-top: 20px;
+}
 
 .menu {
   font-weight: 600;
@@ -3087,7 +3092,8 @@ button {
   padding: 0 5%;
   color: white;
 }
-.menu-item:hover, .menu-item.is-active {
+.menu-item:hover,
+.menu-item.is-active {
   color: #2ecc71;
 }
 
@@ -3096,7 +3102,8 @@ button {
   background-color: white;
   position: relative;
 }
-.section:before, .section:after {
+.section:before,
+.section:after {
   content: "";
   display: block;
   background-color: white;
@@ -3142,7 +3149,7 @@ button {
   line-height: 45px;
   text-transform: uppercase;
 }
-@media only screen and (min-width : 601px) {
+@media only screen and (min-width: 601px) {
   .section-title h1 {
     border-right: 4px solid #2ecc71;
   }
@@ -3284,7 +3291,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-@media only screen and (min-width : 601px) {
+@media only screen and (min-width: 601px) {
   .skills-progress .progress {
     margin: 0 25px;
   }
@@ -3344,7 +3351,8 @@ button {
   font-weight: bold;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   border: 2px solid grey;
   height: 45px;
   width: 100%;
@@ -3360,31 +3368,40 @@ button {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-.form-input::-webkit-placeholder, .form-textarea::-webkit-placeholder {
+.form-input::-webkit-placeholder,
+.form-textarea::-webkit-placeholder {
   color: grey;
 }
-.form-input::-moz-placeholder, .form-textarea::-moz-placeholder {
+.form-input::-moz-placeholder,
+.form-textarea::-moz-placeholder {
   color: grey;
 }
-.form-input::-ms-placeholder, .form-textarea::-ms-placeholder {
+.form-input::-ms-placeholder,
+.form-textarea::-ms-placeholder {
   color: grey;
 }
-.form-input::placeholder, .form-textarea::placeholder {
+.form-input::placeholder,
+.form-textarea::placeholder {
   color: grey;
 }
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: #4f0b0b;
 }
-.form-input:focus::-webkit-placeholder, .form-textarea:focus::-webkit-placeholder {
+.form-input:focus::-webkit-placeholder,
+.form-textarea:focus::-webkit-placeholder {
   color: #4f0b0b;
 }
-.form-input:focus::-moz-placeholder, .form-textarea:focus::-moz-placeholder {
+.form-input:focus::-moz-placeholder,
+.form-textarea:focus::-moz-placeholder {
   color: #4f0b0b;
 }
-.form-input:focus::-ms-placeholder, .form-textarea:focus::-ms-placeholder {
+.form-input:focus::-ms-placeholder,
+.form-textarea:focus::-ms-placeholder {
   color: #4f0b0b;
 }
-.form-input:focus::placeholder, .form-textarea:focus::placeholder {
+.form-input:focus::placeholder,
+.form-textarea:focus::placeholder {
   color: #4f0b0b;
 }
 .form-textarea {
